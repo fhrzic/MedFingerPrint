@@ -403,6 +403,10 @@ If you use medfingerprint in your research, please cite:
 Please also cite [nnU-Net](https://doi.org/10.1038/s41592-020-01008-z) (Isensee et al.,
 Nature Methods 2021), whose dataset fingerprint this work extends, and the datasets you analyse.
 
+## Funding
+The medfinerprint tool is funded by the European Union-NextGenerationEU-SEG-CT-uniri-mz-25-17 (PU-124).
+
 ## License
 
 [MIT](LICENSE) © 2026 Franko Hržić. The datasets analysed with medfingerprint keep their own licences.
+
