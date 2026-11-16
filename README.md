@@ -1,5 +1,8 @@
 # medfingerprint
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)
+
 **Dataset fingerprinting for medical imaging: CT, X-ray and other 2D/3D images.**
 
 medfingerprint scans an imaging dataset once and summarises it in a *fingerprint*: geometry,
@@ -73,7 +76,7 @@ Linux-only (elsewhere, set fewer workers for very large CT volumes).
 ### 1. Get the code
 
 ```bash
-git clone https://github.com/<user>/medfingerprint.git
+git clone https://github.com/fhrzic/medfingerprint.git
 cd medfingerprint
 ```
 
@@ -391,9 +394,9 @@ If you use medfingerprint in your research, please cite:
 ```bibtex
 @misc{medfingerprint,
   title  = {medfingerprint: dataset fingerprinting for medical imaging},
-  author = {TODO},
+  author = {Hržić, Franko},
   year   = {2026},
-  url    = {https://github.com/<user>/medfingerprint}
+  url    = {https://github.com/fhrzic/medfingerprint}
 }
 ```
 
@@ -402,4 +405,4 @@ Nature Methods 2021), whose dataset fingerprint this work extends, and the datas
 
 ## License
 
-TODO
+[MIT](LICENSE) © 2026 Franko Hržić. The datasets analysed with medfingerprint keep their own licences.

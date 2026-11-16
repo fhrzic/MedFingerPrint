@@ -7,6 +7,9 @@ name = "medfingerprint"
 version = "0.1.0"
 description = "Fingerprinting framework for medical imaging datasets (CT, X-ray, 2D/3D)"
 requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Franko Hržić" }]
+readme = "README.md"
 dependencies = [
     "numpy", "scipy", "pandas", "SimpleITK", "pydicom", "tifffile", "pillow",
     "pyyaml", "matplotlib", "reportlab", "scikit-learn",
@@ -24,3 +27,6 @@ include = ["medfingerprint*"]
 
 [tool.setuptools.package-data]
 medfingerprint = ["presets/*.yaml"]
+
+[project.urls]
+Homepage = "https://github.com/fhrzic/medfingerprint"
