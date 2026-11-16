@@ -350,7 +350,7 @@ def build_fingerprint(scan: ScanOutput, name: str = "dataset", anonymize: bool =
 
     fp = {
         "schema": SCHEMA_VERSION,
-        "software": {"name": "medfingerprint", "version": __version__,
+        "software": {"name": "MedFingerPrint", "version": __version__,
                      "python": platform.python_version(), "numpy": np.__version__},
         "created": _dt.datetime.now().isoformat(timespec="seconds"),
         "dataset": {

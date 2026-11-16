@@ -107,7 +107,7 @@ class Doc:
         self._flush()
         d = self.pdf.infodict()
         d["Title"] = self.title
-        d["Creator"] = "medfingerprint"
+        d["Creator"] = "MedFingerPrint"
         d["CreationDate"] = _dt.datetime.now()
         self.pdf.close()
 
@@ -319,11 +319,11 @@ def fingerprint_report(fp: dict, out: str, side: Optional[dict] = None,
     from ..core.config import HistogramSpec
     d = fp["dataset"]
     spec = HistogramSpec.from_dict(fp["histogram_spec"])
-    doc = Doc(out, f"medfingerprint report: {d['name']}",
+    doc = Doc(out, f"MedFingerPrint report: {d['name']}",
               _dt.datetime.now().strftime("%Y-%m-%d %H:%M"))
     doc.new_page()
     doc.heading(f"Dataset fingerprint: {d['name']}", 0)
-    doc.para(f"Created {fp.get('created', '?')} with medfingerprint {_g(fp, 'software', 'version')} "
+    doc.para(f"Created {fp.get('created', '?')} with MedFingerPrint {_g(fp, 'software', 'version')} "
              f"(schema {fp.get('schema')}).", color=MUTED)
     _overview(doc, fp)
     _geometry(doc, fp)
@@ -782,7 +782,7 @@ def compare_report(fps: list, out: str, region: Optional[str] = None, binset=Non
     names = [C.name_of(fp) for fp in fps]
     regs = C.common_regions(fps)
     region = region or ("body" if "body" in regs else (regs or ["all"])[0])
-    doc = Doc(out, "medfingerprint comparison: " + " vs ".join(names),
+    doc = Doc(out, "MedFingerPrint comparison: " + " vs ".join(names),
               _dt.datetime.now().strftime("%Y-%m-%d %H:%M"))
     doc.new_page()
     doc.heading("Dataset comparison", 0)

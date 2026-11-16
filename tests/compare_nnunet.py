@@ -1,4 +1,4 @@
-"""Compare the nnU-Net block of a medfingerprint JSON with nnU-Net's dataset_fingerprint.json.
+"""Compare the nnU-Net block of a MedFingerPrint JSON with nnU-Net's dataset_fingerprint.json.
 
     python tests/compare_nnunet.py ours.json dataset_fingerprint.json
 Exit code 0 = identical. mean/std are compared at float32 precision (rtol 1e-5): nnU-Net

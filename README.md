@@ -1,11 +1,11 @@
-# medfingerprint
+# MedFingerPrint
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)
 
 **Dataset fingerprinting for medical imaging: CT, X-ray and other 2D/3D images.**
 
-medfingerprint scans an imaging dataset once and summarises it in a *fingerprint*: geometry,
+MedFingerPrint scans an imaging dataset once and summarises it in a *fingerprint*: geometry,
 intensity distributions, per-structure label statistics, image quality, duplicates, outliers
 and the nnU-Net plan the data would get. It builds on the dataset fingerprint of
 [nnU-Net](https://github.com/MIC-DKFZ/nnUNet). Fingerprints can be explored in a desktop
@@ -76,8 +76,8 @@ Linux-only (elsewhere, set fewer workers for very large CT volumes).
 ### 1. Get the code
 
 ```bash
-git clone https://github.com/fhrzic/medfingerprint.git
-cd medfingerprint
+git clone https://github.com/fhrzic/MedFingerPrint.git
+cd MedFingerPrint
 ```
 
 ### 2. Create a virtual environment and install
@@ -389,14 +389,14 @@ NNUNET_PY=/path/to/nnunet-env/bin/python .venv/bin/python -m pytest tests -q   #
 
 ## Citation
 
-If you use medfingerprint in your research, please cite:
+If you use MedFingerPrint in your research, please cite:
 
 ```bibtex
-@misc{medfingerprint,
-  title  = {medfingerprint: dataset fingerprinting for medical imaging},
+@misc{MedFingerPrint,
+  title  = {MedFingerPrint: dataset fingerprinting for medical imaging},
   author = {Hržić, Franko},
   year   = {2026},
-  url    = {https://github.com/fhrzic/medfingerprint}
+  url    = {https://github.com/fhrzic/MedFingerPrint}
 }
 ```
 
@@ -408,5 +408,5 @@ The medfinerprint tool is funded by the European Union-NextGenerationEU-SEG-CT-u
 
 ## License
 
-[MIT](LICENSE) © 2026 Franko Hržić. The datasets analysed with medfingerprint keep their own licences.
+[MIT](LICENSE) © 2026 Franko Hržić. The datasets analysed with MedFingerPrint keep their own licences.
 

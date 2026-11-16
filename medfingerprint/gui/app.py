@@ -1312,7 +1312,7 @@ class OutliersTab(QWidget):
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("medfingerprint: dataset fingerprinting")
+        self.setWindowTitle("MedFingerPrint: dataset fingerprinting")
         self.resize(1300, 900)
         self.tabs = QTabWidget()
         self.scan = ScanTab()
@@ -1379,7 +1379,7 @@ class MainWindow(QMainWindow):
         try:
             fp, side = load_fingerprint(path)
             if not str(fp.get("schema", "")).startswith("medfingerprint/"):
-                raise ValueError("not a medfingerprint fingerprint JSON")
+                raise ValueError("not a MedFingerPrint fingerprint JSON")
             for tab in (self.summary, self.hist, self.outl, self.qual):
                 tab.set_fp(fp, side, path)
             self.fp, self.side = fp, side
@@ -1394,7 +1394,7 @@ class MainWindow(QMainWindow):
         self.current_path = path
         d = fp["dataset"]
         self.statusBar().showMessage(f"{path}   |   {d['name']}: {d['n_ok']} cases, modality {d['modality']}")
-        self.setWindowTitle(f"medfingerprint: {d['name']}")
+        self.setWindowTitle(f"MedFingerPrint: {d['name']}")
 
     def export_pdf(self):
         if not self.fp:
@@ -1480,7 +1480,7 @@ def main(argv=None):
     argv = sys.argv[1:] if argv is None else argv
     pg.setConfigOptions(antialias=True, imageAxisOrder="col-major")
     app = QApplication.instance() or QApplication(sys.argv[:1])
-    app.setApplicationName("medfingerprint")
+    app.setApplicationName("MedFingerPrint")
     w = MainWindow()
     w.show()
     if argv and argv[0].endswith(".json") and os.path.isfile(argv[0]):

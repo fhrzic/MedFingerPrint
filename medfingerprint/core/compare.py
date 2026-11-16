@@ -32,7 +32,7 @@ def load_for_compare(path: str) -> dict:
     with open(path) as fh:
         fp = json.load(fh)
     if not str(fp.get("schema", "")).startswith("medfingerprint/"):
-        raise ValueError(f"{path} is not a medfingerprint fingerprint")
+        raise ValueError(f"{path} is not a MedFingerPrint fingerprint")
     fp.pop("cases", None)
     fp["_path"] = path
     return fp
