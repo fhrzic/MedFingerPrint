@@ -1,0 +1,33 @@
+# CT intensity bin presets (Hounsfield units). Bins are half-open [lo, hi).
+# null = unbounded. Values are approximate textbook ranges -- verify before citing.
+ct_tissue:
+  description: "Coarse tissue classes, non-overlapping"
+  unit: HU
+  bins:
+    - {name: "Air / outside body",          lo: null,  hi: -950, color: "#1f1f1f"}
+    - {name: "Lung parenchyma",             lo: -950,  hi: -500, color: "#6baed6"}
+    - {name: "Low density / partial volume", lo: -500, hi: -190, color: "#9ecae1"}
+    - {name: "Fat",                          lo: -190, hi: -30,  color: "#fdd49e"}
+    - {name: "Water / fluid / CSF",          lo: -30,  hi: 20,   color: "#c6dbef"}
+    - {name: "Soft tissue / organs / muscle", lo: 20,  hi: 100,  color: "#fc9272"}
+    - {name: "Enhanced tissue / vessels",    lo: 100,  hi: 300,  color: "#de2d26"}
+    - {name: "Cancellous bone",              lo: 300,  hi: 700,  color: "#f0f0f0"}
+    - {name: "Cortical bone",                lo: 700,  hi: 2000, color: "#bdbdbd"}
+    - {name: "Dense bone / metal / artifact", lo: 2000, hi: null, color: "#636363"}
+
+ct_body_composition:
+  description: "Alberta protocol thresholds (Mitsiopoulos et al., J Appl Physiol 1998)"
+  unit: HU
+  bins:
+    - {name: "Below fat",          lo: null, hi: -190, color: "#3f3f3f"}
+    - {name: "Adipose tissue",     lo: -190, hi: -29,  color: "#fdd49e"}
+    - {name: "Skeletal muscle",    lo: -29,  hi: 151,  color: "#fc9272"}
+    - {name: "Above muscle",       lo: 151,  hi: null, color: "#bdbdbd"}
+
+ct_coarse:
+  description: "Air / soft tissue / bone"
+  unit: HU
+  bins:
+    - {name: "Air & lung", lo: null, hi: -200, color: "#6baed6"}
+    - {name: "Soft tissue", lo: -200, hi: 200, color: "#fc9272"}
+    - {name: "Bone & dense", lo: 200, hi: null, color: "#bdbdbd"}

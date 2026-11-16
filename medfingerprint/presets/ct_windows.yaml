@@ -1,0 +1,8 @@
+# Display windows (width W, level L) in HU for the viewer.
+lung:        {W: 1500, L: -600}
+mediastinum: {W: 350,  L: 50}
+abdomen:     {W: 400,  L: 50}
+liver:       {W: 150,  L: 30}
+bone:        {W: 1800, L: 400}
+brain:       {W: 80,   L: 40}
+full:        {W: 4096, L: 1024}
